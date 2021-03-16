@@ -1,10 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import UserEvent from '@testing-library/user-event';
 import { ConfirmationDialogComponent } from './confirmation-dialog.component';
 import userEvent from '@testing-library/user-event';
 
-describe('./common/components/confirmation-dialog', () => {
+describe('./common/components/confirmation-dialog/confirmation-dialog.component specs', () => {
   it('should display the title of the confirmation dialog when it feeds a title', () => {
     // Arrange
     const props = {

@@ -4,7 +4,7 @@ import * as viewModel from './project.vm';
 import * as collectionMapper from 'common/mappers/collection.mapper';
 
 
-describe('./pods/project/project.mapper', () => {
+describe('./pods/project/project.mapper specs', () => {
   it('should return empty project when it feeds undefined', () => {
 
     // Arrange

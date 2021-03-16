@@ -2,7 +2,7 @@ import { renderHook, act } from '@testing-library/react-hooks';
 import { createEmptyLookup, Lookup } from 'common/models';
 import { useConfirmationDialog } from './confirmation-dialog.hook';
 
-describe('./common/components/confirmation-dialog.hook', () => {
+describe('./common/components/confirmation-dialog/confirmation-dialog.hook specs', () => {
   it('should return an object with isOpen equals to false when it calls it', () => {
     // Arrange
 
