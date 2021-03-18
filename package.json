@@ -16,7 +16,7 @@
     "clean": "rimraf dist",
     "test:e2e": "npm run start -- start:e2e",
     "start:e2e": "cypress open",
-    "test:e2e:ci": "npm run start -- start:e2e:ci",
+    "test:e2e:ci": "npm run start -- -r start:e2e:ci",
     "start:e2e:ci": "cypress run"
   },
   "repository": {
