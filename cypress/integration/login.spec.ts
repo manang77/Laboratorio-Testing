@@ -197,7 +197,7 @@ describe('Login specs', () => {
     cy.get('@passwordInput').should('have.value', password);
     cy.get('@submitButton').click();
 
-    cy.url().should('eq', 'http://localhost:8080/#/submodule-list')
+    cy.url().should('eq', 'http://localhost:8000/#/submodule-list')
   });
 
 });

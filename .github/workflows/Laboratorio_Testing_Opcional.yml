@@ -16,3 +16,15 @@ jobs:
         run: npm test project.mapper confirmation.dialog
       - name: e2e Tests
         run: npm run test:e2e:ci
+      - name: Upload videos when e2e tests fail
+        if: ${{failure()}}
+        uses: actions/upload-artifact@v2
+        with:
+          name: videos
+          path: ./cypress/videos
+      - name: Upload screenshots when e2e tests fail
+        if: ${{failure()}}
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshots
+          path: ./cypress/screenshots
