@@ -13,7 +13,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Unit Tests
-        run: npm test project.mapper confirmation.dialog
+        run: npm test project.mapper confirmation.dialog spinner.component
       - name: e2e Tests
         run: npm run test:e2e:ci
       - name: Upload videos when e2e tests fail
