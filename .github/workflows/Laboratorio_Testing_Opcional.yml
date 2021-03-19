@@ -1,0 +1,30 @@
+name: CI Optional Testing Laboratory
+
+on: pull_request
+
+jobs:
+  Laboratorio_Testing_Opcional:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Unit Tests
+        run: npm test project.mapper confirmation.dialog spinner.component
+      - name: e2e Tests
+        run: npm run test:e2e:ci
+      - name: Upload videos when e2e tests fail
+        if: ${{failure()}}
+        uses: actions/upload-artifact@v2
+        with:
+          name: videos
+          path: ./cypress/videos
+      - name: Upload screenshots when e2e tests fail
+        if: ${{failure()}}
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshots
+          path: ./cypress/screenshots
